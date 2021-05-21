@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "html2json": "^1.0.2",
     "showdown": "^1.9.1"
   }
 }

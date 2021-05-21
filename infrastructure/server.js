@@ -1,5 +1,5 @@
 const http = require('http');
-const router = require('./router');
+const router = require('../application/router');
 
 function init(port = 8080) {
   http.createServer((req, res) => {
