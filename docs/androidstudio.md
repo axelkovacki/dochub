@@ -34,3 +34,6 @@ flutter doctor -v
 ```
 
  - [Repositório no Github](./back.md)
+
+
+:flutter: :android: :mobile:

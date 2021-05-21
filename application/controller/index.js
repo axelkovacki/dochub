@@ -41,13 +41,14 @@ function search(term = null) {
     docs.push({
       ...getTitleAndDescription(raw),
       tags: getTags(raw),
-      route
+      route,
+      raw
     });
   });
 
   if (term) {
     term = term.toLowerCase();
-    docs = docs.filter(({ title, text, tags }) => {
+    docs = docs.filter(({ title, text, tags, raw }) => {
       if (title.toLowerCase().indexOf(term) !== -1) {
         return true;
       }
@@ -58,9 +59,17 @@ function search(term = null) {
 
       if (tags) {
         const terms = term.split(' ');
-        return terms.filter(
+        const findByTag = terms.filter(
           (t) => tags.filter((tag) => tag.indexOf(t) !== -1).length
         ).length;
+
+        if (findByTag) {
+          return true;
+        }
+      }
+
+      if (raw.toLowerCase().indexOf(term) !== -1) {
+        return true;
       }
 
       return false;

@@ -13,3 +13,7 @@ body {
 .content {
   background-color: white;
 }
+
+.text-left {
+  text-align: left;
+}
