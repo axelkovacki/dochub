@@ -11,8 +11,9 @@ function init(port = 8080) {
       res.write(html, 'binary');
       res.end();
     } catch (err) {
-      res.writeHead(404);
-      return res.end(JSON.stringify(err));
+      console.log(err);
+      res.writeHead(500);
+      return res.end(err.message);
     }
   }).listen(port);
 }

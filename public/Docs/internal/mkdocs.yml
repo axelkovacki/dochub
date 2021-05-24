@@ -1,0 +1,32 @@
+site_name: CompufacilDocs
+docs_dir: src
+nav:
+- Home: 'index.md'
+- Setup ambiente: 'SettingDevelopmentEnvironment.md'
+- Url's do sistema: 'UtilsLinks.md'
+- More:
+    - BirtReports.md
+    - Checklist.md
+    - DevTeamCode.md
+    - SecretsConfig.md
+    - Team.md
+    - Translation.md
+    - UtilsCommands.md
+    - BackendAndDevOps/ApiStatus.md
+    - BackendAndDevOps/ApiTests.md
+    - BackendAndDevOps/Database.md
+    - BackendAndDevOps/ErrorMessages.md
+    - BackendAndDevOps/Exceptions.md
+    - BackendAndDevOps/Queues.md
+    - BackendAndDevOps/GoodPractices.md
+    - BackendAndDevOps/Modeling.md
+    - BackendAndDevOps/Module.md
+    - BackendAndDevOps/Notifications.md
+    - BackendAndDevOps/ProfilingPHP.md
+    - BackendAndDevOps/RenewBackendSSLCertificates.md
+    - BackendAndDevOps/RenewCloudFrontSSLCertificates.md
+    - BackendAndDevOps/RepositoriesAndGateways.md
+    - BackendAndDevOps/Services.md
+    - BackendAndDevOps/ServicesUnitTests.md
+    - BackendAndDevOps/SwaggerImplementacao.md
+    - BackendAndDevOps/UnitTests.md

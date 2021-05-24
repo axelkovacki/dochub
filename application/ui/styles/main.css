@@ -3,6 +3,7 @@ body {
   background-color: #f2f4f8;
   color: #334152;
   text-align: center;
+  max-width: 99%;
 }
 
 .search .form-outline {

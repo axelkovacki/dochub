@@ -13,13 +13,13 @@ function getTitleAndDescription(raw) {
   const p = data.filter(({ tag }) => tag === 'p');
 
   return {
-    title: h1[0]?.child[0]?.text,
-    text: p[0]?.child[0]?.text
+    title: h1[0]?.child[0]?.text ?? 'Nenhum texto encontrado',
+    text: p[0]?.child[0]?.text ?? 'Nenhum texto encontrado'
   }
 }
 
 function getTags(raw) {
-  let tags = raw.match(/(?<=\:).+?(?=\:)/g);
+  let tags = raw.match(/(?<=\_\_).+?(?=\_\_)/g);
   if (tags) {
     tags = tags.filter((tag) => {
       if (tag.length === 0 || tag.length === 1) {
@@ -35,8 +35,12 @@ function getTags(raw) {
 
 function search(term = null) {
   let docs = [];
-  finder.listFilesInDir('docs').forEach((route) => {
-    const raw = finder.readFile(`docs/${route}`);
+  finder.walk('public').forEach((route) => {
+    if (route.indexOf('.md') === -1) {
+      return;
+    }
+
+    const raw = finder.readFile(route);
 
     docs.push({
       ...getTitleAndDescription(raw),
@@ -80,7 +84,7 @@ function search(term = null) {
 }
 
 function show(req) {
-  const data = finder.readFile(`docs${req.url}`);
+  const data = finder.readFile(req.url);
   const html = converter.md2Html(data);
 
   return ui.show(html);

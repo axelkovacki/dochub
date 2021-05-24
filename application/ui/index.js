@@ -4,7 +4,7 @@ const components = require('./components/index');
 function index(cards) {
   const html = `
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="pt-br">
       ${components.head}
     <body>
       <div class="row">

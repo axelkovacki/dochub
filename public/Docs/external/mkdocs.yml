@@ -1,0 +1,10 @@
+site_name: Integração CompuFácil
+site_description: Documentação da API da CompuFácil
+site_author: contato@clippfacil.com.br
+theme: mkdocs
+google_analytics: ['UA-98308510-1', 'developer.clippfacil.com.br']
+pages:
+- API Compufácil:
+    - Home: 'index.md'
+- SDK:
+    - PHP: 'sdk-php.md'
