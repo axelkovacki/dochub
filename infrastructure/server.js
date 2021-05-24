@@ -1,7 +1,7 @@
 const http = require('http');
 const router = require('../application/router');
 
-function init(port = 8080) {
+function init(port = 8081) {
   http.createServer((req, res) => {
     try {
       res.writeHead(200);
